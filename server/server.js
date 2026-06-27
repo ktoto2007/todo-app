@@ -6,10 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// подключаем роуты
 const todoRoutes = require("./routes/todos");
+const folderRoutes = require("./routes/folders");
 
 app.use("/todos", todoRoutes);
+app.use("/folders", folderRoutes);
 
 app.get("/", (req, res) => {
     res.json({ message: "Backend работает" });

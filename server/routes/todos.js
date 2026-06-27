@@ -5,9 +5,11 @@ const {
     getTodos,
     createTodo,
     updateTodo,
-    deleteTodo
+    deleteTodo,
+    getTodosByFolder
 } = require("../controllers/todosController");
 
+router.get("/folder/:id", getTodosByFolder);
 router.get("/", getTodos);
 router.post("/", createTodo);
 router.patch("/:id", updateTodo);
