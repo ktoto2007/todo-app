@@ -8,16 +8,13 @@ export const getFolders = async () => {
 };
 
 export const createFolder = async (name: string) => {
-  const res = await axios.post(`${API}/folders`, { name });
+  const res = await axios.post(`${API}/folders`, {name});
   return res.data;
 };
 
 export const updateFolder = async (id: number, name: string) => {
   const res = await axios.patch(
-    `${API}/folders/${id}`,
-    {
-      name
-    }
+    `${API}/folders/${id}`, {name}
   );
   return res.data;
 };
