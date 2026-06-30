@@ -29,7 +29,7 @@ psql -U postgres -c "CREATE DATABASE todo;"
 psql -U postgres -d todo -f schema.sql
 ```
 
-Создай файл `.env` на основе `.env.example` и заполни своими данными.
+Создайте файл `.env` на основе `.env.example` и заполните своими данными.
 
 ```bash
 npm start
