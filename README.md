@@ -8,7 +8,7 @@
 - База данных: PostgreSQL
 
 ## Деплой
-[ссылка появится после деплоя]
+https://client-production-5a68.up.railway.app
 
 ## Code Climate
 [бейдж появится после подключения]
@@ -16,32 +16,31 @@
 ## Запуск локально
 
 ### 1. Клонировать репозиторий
+
+```bash
 git clone <ссылка на репозиторий>
 cd todo-app
+```
 
 ### 2. Backend
 
+```bash
 cd server
 npm install
-
-Создать базу данных:
 psql -U postgres -c "CREATE DATABASE todo;"
-
-Применить схему:
 psql -U postgres -d todo -f schema.sql
+```
 
-Создать файл .env на основе .env.example и заполнить своими данными (пароль от PostgreSQL)
+Создай файл `.env` на основе `.env.example` и заполни своими данными.
 
-Запустить сервер:
+```bash
 npm start
-
-Сервер запустится на http://localhost:5000
+```
 
 ### 3. Frontend
 
-Открыть новый терминал:
+```bash
 cd client
 npm install
 npm run dev
-
-Приложение откроется на http://localhost:5173
+```
