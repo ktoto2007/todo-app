@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000";
+const API = "https://todo-app-production-2dc5.up.railway.app";
 
 export const getFolders = async () => {
   const res = await axios.get(`${API}/folders`);

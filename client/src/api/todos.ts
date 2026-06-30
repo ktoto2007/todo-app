@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://todo-app-production-2dc5.up.railway.app";
 
 export const getTodos = async () => {
   const res = await axios.get(`${API_URL}/todos`);
