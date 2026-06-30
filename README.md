@@ -1,3 +1,4 @@
+[![Maintainability](https://qlty.sh/gh/ktoto2007/projects/todo-app/maintainability.svg)](https://qlty.sh/gh/ktoto2007/projects/todo-app)
 # Todo App
 
 Веб-приложение для управления личными задачами, вдохновлённое Microsoft To Do. Позволяет создавать списки задач, отмечать выполненные, помечать важные и устанавливать сроки выполнения. Реализовано как полноценное full-stack приложение с REST API и PostgreSQL.
