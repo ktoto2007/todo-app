@@ -3,6 +3,10 @@ import { getTodos, getTodosByFolder, createTodo, updateTodo, deleteTodo } from "
 import { getFolders, createFolder, deleteFolder, updateFolder } from "./api/folders"
 import Modal from "./Modal.tsx"
 import "./App.css"
+import folderStarIcon from "./assets/folder-star.png"
+import calendarIcon from "./assets/calendar.png"
+import binIcon from "./assets/bin.png"
+import userFolderIcon from "./assets/user-folder-icon.png"
 
 type Folder = { id: number; name: string }
 
@@ -21,7 +25,7 @@ type Selected = number | "important" | "planned"
 const FolderItem = (props: { folder: Folder; active: boolean; onClick: () => void }) => {
   return (
     <div className={`folder-row ${props.active ? "active" : ""}`} onClick={props.onClick}>
-      <img className="folder-icon" src="/src/assets/user-folder-icon.png" alt="" />
+      <img className="folder-icon" src={userFolderIcon} alt="" />
       <span>{props.folder.name}</span>
     </div>
   )
@@ -171,10 +175,10 @@ function App() {
     <div className="container">
       <div className="sidebar">
         <div className={`folder-row ${selected === "important" ? "active" : ""}`} onClick={() => selectFolder("important")}>
-          <img className="folder-icon" src="/src/assets/folder-star.png" alt="" /><span>Важно</span>
+          <img className="folder-icon" src={folderStarIcon} alt="" /><span>Важно</span>
         </div>
         <div className={`folder-row ${selected === "planned" ? "active" : ""}`} onClick={() => selectFolder("planned")}>
-          <img className="folder-icon" src="/src/assets/calendar.png" alt="" /><span>Запланировано</span>
+          <img className="folder-icon" src={calendarIcon} alt="" /><span>Запланировано</span>
         </div>
         <div className="folders">
           {folders.map(f => (
@@ -198,7 +202,7 @@ function App() {
             >
               {getFolderName()}
             </div>
-            <img title="Удалить список" className="delete-folder-btn" src="/src/assets/bin.png" alt="" onClick={() => handleDeleteFolder(selected)} />
+            <img title="Удалить список" className="delete-folder-btn" src={binIcon} alt="" onClick={() => handleDeleteFolder(selected)} />
           </>
         ) : (
           <div className="list-title">{getFolderName()}</div>
